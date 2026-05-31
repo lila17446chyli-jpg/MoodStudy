@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoodStudy</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="app" class="light-mode">
+    
+    <button id="theme-toggle" class="btn-toggle">🌗 Cambiar Tema</button>
+
+    <section id="home-screen" class="screen">
+      <div class="welcome-container">
+        <h1>MoodStudy</h1>
+        <p class="subtitle">¿Cómo te sientes para estudiar hoy?</p>
+        
+        <div class="mood-options">
+          <button class="mood-btn" data-mood="estresado">
+            <span class="mood-icon">🧘‍♂️</span>
+            <span class="mood-text">Estresado</span>
+          </button>
+          <button class="mood-btn" data-mood="cansado">
+            <span class="mood-icon">☕</span>
+            <span class="mood-text">Cansado</span>
+          </button>
+          <button class="mood-btn" data-mood="motivado">
+            <span class="mood-icon">⚡</span>
+            <span class="mood-text">Motivado</span>
+          </button>
+          <button class="mood-btn" data-mood="chill">
+            <span class="mood-icon">🌊</span>
+            <span class="mood-text">Chill</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard-screen" class="screen hidden">
+      <div class="dashboard-header">
+        <button id="back-btn">← Cambiar estado de ánimo</button>
+        <h2 id="dashboard-title">Tu espacio ideal</h2>
+      </div>
+      
+      <div class="grid-container">
+        <div class="card" id="spotify-card">
+          <h3>🎵 Tu Banda Sonora</h3>
+          <p>Música seleccionada para tu estado actual.</p>
+          <a id="spotify-link" href="#" target="_blank" class="btn-spotify">Abrir Playlist en Spotify</a>
+        </div>
+
+        <div class="card" id="timer-card">
+          <h3>⏱️ Temporizador de Estudio</h3>
+          <div id="timer-display">00:00</div>
+          <button id="timer-control" class="btn-main">Iniciar</button>
+        </div>
+
+        <div class="card" id="tips-card">
+          <h3>💡 Técnica Recomendada</h3>
+          <p id="tip-text">Cargando consejo...</p>
+        </div>
+      </div>
+    </section>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
